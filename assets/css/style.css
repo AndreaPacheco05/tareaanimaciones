@@ -1,0 +1,461 @@
+/************* GENERAL ************/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+
+}
+body{
+    background-image: url(../img/gfbg1.jpg);
+    background-repeat: none;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 'nav' 'header' 'home' 'book' 'footer';
+}
+
+/************* NAVBAR ************/
+
+.nav-main{
+    background-color: #345232;
+    text-align: center;
+    grid-area: nav;  
+    display: flex;
+}
+.img-rueda{
+    width: 5.5em;
+    animation: ball 7s steps(500) infinite;
+}
+@keyframes ball {
+    0% {
+       transform: translateX(0); transform: rotate(0deg); 
+    }
+    25% {
+       transform: translateX(50px); transform: rotate(90deg);
+    }
+    50% {
+        transform: translateX(0); transform: rotate(180deg);
+    }
+    75% {
+       transform: translateX(-50px); transform: rotate(270deg);
+    }
+    100% {
+       transform: translateX(0px); transform: rotate(360deg); 
+    }
+}
+.img-gf{
+    width: 9em;
+    font-size: 1.4em;
+}
+.menu{
+    margin-left: 3em;
+    font-size: 1.2em;
+}
+.menu:hover{
+    cursor: pointer;
+    transform: scale(1.2); 
+    cursor: pointer;
+    transition: all 0.3s ease ;
+}
+
+/************* HEADER ************/
+
+.header-main{
+    grid-area: header;
+    display: flex;
+}
+.header-main h1{
+   text-align: center;
+   font-size: 4em;
+}
+.header-main section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.bill-welcome-img{
+    width: 15.5em;
+    animation: weird 4s steps(500) infinite;
+}
+@keyframes weird {
+    0% {
+       transform: translateX(0);
+    }
+    25% {
+       transform: translateX(100px);
+    }
+    75% {
+       transform: translateX(-100px);
+    }
+    100% {
+       transform: translateX(0px);
+    }
+}
+.bill-welcome{
+   margin: 1.5em;
+   padding: 1.5em;
+   background-color: #33110e;
+   color: white;
+}
+
+/************* HOME ************/
+
+.home{
+    padding: 1em 0em;
+    text-align: center;
+    grid-area: home;
+}
+.home h2{
+    font-size: 3em;
+    background-color: #6f300093;
+    padding: 0.5em;
+}
+bill-home{
+    display: flex;
+    margin: 1em 0;
+}
+.home section{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+.home article{
+    border: 1px solid black;
+    background-color: #c0a997;
+    width: 9.5em;
+    height: 13em;
+}
+.home img{
+    margin-top: 1em;
+    filter: blur(7px);
+}
+
+.dipper{ width: 5.1em;}
+.mabel{ width: 8.8em;}
+.stanley{  width: 9em;}
+.standford{ width: 4.5em;}
+.bill{ width: 6em;}
+.soos{ width: 5.6em;}
+.pato{ width: 7.2em;}
+.wendy{ width: 4.9em;}
+.mcgucket{ width: 8em;}
+.gideon{ width: 9.2em ;}
+.pacifica{ width: 5.8em;}
+
+.home img:hover{
+    transform: scale(1.4); 
+    cursor: pointer;
+    transition:  0.3s ease-out;
+    filter: grayscale(0);
+}
+.btn{
+    background-color: #7A001B;
+    font-style: italic;
+    height: 1.3em;
+    font-size: 2em;
+    color: #7A001B;
+}
+.btn:hover{
+    transition: 1s ease-in; 
+    background-color: #c0a997;
+    color: #310803;
+}
+.prueba-bill{
+    display: flex;
+    background-color: #c5a800d0;
+    margin: 1em;
+    padding: 1.2em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.prueba-bill img{
+    filter: none;
+    width: 15em;
+}
+.prueba-bill img:hover{
+    transform: scale(1); 
+    filter: grayscale(0);
+}
+
+.prueba-bill-text{
+    background-color: #c5a800d0;
+}
+.prueba-bill-text2{
+    background-color: #c5a800ea;
+    margin: 1em;
+    padding: 1.2em;
+}
+
+/************ BOOK *************/
+
+.book{
+grid-area: book;
+text-align: center;
+}
+.book h2{
+    font-size: 3em;
+    background-color: #6f300093;
+    margin-top: 0.2em;
+    padding: 0.5em;
+}
+.bye-bill{
+    display: flex;
+    background-color: #008cffcb;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em;
+}
+.bad-bill img{
+    width: 15em;
+    margin-top: 1em;
+    padding: 0em;
+    border-radius: 19em;
+    animation: otrobill 10s steps(144) infinite alternate;
+}
+@keyframes otrobill {
+    0% {
+       transform: translateX(0);
+    }
+    25% {
+       transform: translateX(50px); 
+    }
+    75% {
+       transform: translateX(-50px);
+    }
+    100% {
+       transform: translateX(0px);
+    }
+}
+.bye-bill-text{
+    background-color: #008cffcb;
+    margin: 1em;
+    padding: 1.2em;
+}
+.librodebill{
+    display: flex;
+    justify-content: center;
+}
+.librodebill img{
+    width: 8em;
+    margin: 0;
+    padding: 0.5em;
+}
+.librodebill img:hover{
+    transform: scale(1.2); 
+    cursor: pointer;
+    transition:  0.3s ease-out;
+}
+.crazy{
+    color: white;
+    margin: 0.5em 1em;
+    font-size: 2.2em;
+    font-style: italic;
+    animation: crazy 1s linear 0s infinite alternate;
+} 
+@keyframes crazy {
+    from {
+    background-color: #cfcc02;
+    }
+    to {
+    background-color: #00bfe0;
+    }
+}
+
+/************* FOOTER ************/
+
+.footer{
+    grid-area: footer;
+    background-color: #C1B800;
+    text-align: center;
+}
+.footer-icons{
+ color: black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+}
+.disney{
+    width: 2.8em;
+}
+.not-disney{
+    width: 4em;
+}
+.not-disney:hover{
+    transform: scale(1.4); 
+    cursor: pointer;
+    transition:  0.3s ease-out;
+}
+.footer-icons i{
+    color: black;
+}
+.footer-text{
+    padding-bottom: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+.bill-footer{
+    font-style: italic;
+    font-family: 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size: 25px;
+}
+
+/************* MEDIA QUERIE ************/
+@media (max-width: 576px) {
+    .nav-main{
+        height: 15vh;   
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-main h2{
+        display: none;
+    }
+    .nav-main ul{
+        display: none;
+    }    
+    .nav-icon{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+@media (min-width:576px) {
+    .nav-main{
+        background-color: #345232;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 230px;
+    } 
+    .img-rueda{
+        width: 15vh;
+    }
+    .img-gf{
+        margin-top: 2em;
+        width: 9.9em;
+    }
+    .nav-main ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        list-style: none;
+        margin: 1.5em 1.9em;        
+        gap: 1.5em;
+        font-size: 20px;
+    }
+    .nav-main ul a{
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.719);
+        padding: 0.5em;        
+    }
+    .nav-main ul a:hover{
+        background-color: #182617;
+        border: 1px solid #345232;
+    }
+    .menu{
+        display: none;
+    }
+
+    .header-main h1{
+       font-size: 6em;
+    }
+    .bill-welcome-img{
+        width: 20em;
+    }
+    .bill-welcome{
+        margin: 0 10em;
+        font-size: 1.7em;
+    } 
+    .prueba-bill{
+        display: flex;
+        background-color: #c5a800d0;
+        margin: 1em 10em;
+        font-size: 1.5em;
+        padding: 1.2em;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .prueba-bill img{
+        margin-bottom: 25px;
+    }
+    .prueba-bill-text{
+        background-color: #c5a800d0;
+    }
+    .prueba-bill-text2{
+        background-color: #c5a800d0;
+        margin: 1em 10em;
+        font-size: 1.5em;
+    }
+
+    .bye-bill{
+        margin: 1em 10em;
+        font-size: 1.5em;
+    }
+    .crazy{
+        margin: 0.5em 9em;
+        padding: 1em;
+    }
+    
+    .bill-home{
+        display: flex;
+        margin-bottom: 2em;
+    }
+    .home section{
+        flex-direction: row;
+        gap: 1.5em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .home article{
+        width: 24em;
+        height: 20em;
+    }
+    .home-img{
+        color: #164ab9;
+    }
+
+.dipper{ width: 9em;}
+.mabel{ width: 15.5em;}
+.stanley{  width: 15.7em;}
+.standford{ width: 8em;}
+.bill{ width: 10.5em;}
+.soos{ width: 9.8em;}
+.pato{ width: 12.7em;}
+.wendy{ width: 8.6em;}
+.mcgucket{ width: 14em;}
+.gideon{ width: 16.2em ;}
+.pacifica{ width: 10.1em;}
+
+    .footer{
+        background-color: #C1B800; 
+        border: #C1B800 solid 2px;
+    }
+    .grid-container{
+        grid-template-areas: 
+        'nav header'
+        'nav home'
+        'nav book'
+        'nav footer';
+        grid-template-columns: 1fr 5fr;
+        grid-template-columns: 220px auto;
+        grid-template-rows: 0.7fr 5fr 0.1fr;
+        height: 200vh;
+        gap: 1px;
+    }
+}
